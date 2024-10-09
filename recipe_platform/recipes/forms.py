@@ -8,4 +8,13 @@ class RegisterForm(UserCreationForm):
     class Meta:
         model = User
         feilds = ['username', 'email', 'password1', 'password2']
-        
+
+
+from .models import Recipe
+class RecipeForm(forms.ModelForm):
+    class Meta:
+        model = Recipe
+        fields = ['title', 'description',
+                'ingredients', 'instructions', 'cooking_time', 
+                'difficulty', 'image']
+
